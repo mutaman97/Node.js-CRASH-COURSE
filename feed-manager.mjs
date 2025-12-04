@@ -2,7 +2,6 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { access, constants, readFile, writeFile } from "fs/promises";
 import { error } from "console";
-// import { readFile, writeFile } from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -23,5 +22,3 @@ export async function getLinks() {
 export async function saveLinks(links) {
     await writeFile(jsonFile, JSON.stringify(links));
 }
-
-console.log(jsonFile);
